@@ -1,4 +1,4 @@
-This is an end to end data engineering project.
+This is an end to end data engineering project for retail sales data.
 
 Exploritary phase:
   1. Explore retail sales dataset provided on a csv workbook
