@@ -2,7 +2,7 @@
 
 --create table dim Location
 create table dim_location (
-	location_id int primary key,
+	location_id serial primary key,
 	continent varchar(50),
 	country varchar(100),
 	city varchar(50)
@@ -10,13 +10,13 @@ create table dim_location (
 
 --create table dim payment
 create table dim_payment (
-	payment_id int primary key,
+	payment_id serial primary key,
 	payment_method varchar(50)
 );
 
 --create table dim product
 create table dim_product (
-	product_id int primary key,
+	product_id serial primary key,
 	SKU varchar(50),
 	product_name varchar(100),
 	brand varchar(50),
@@ -26,50 +26,50 @@ create table dim_product (
 
 --create table dim store
 create table dim_store (
-	store_id int primary key,
+	store_id serial primary key,
 	store_name varchar(100),
 	store_type varchar(50)
 );
 
 -- create table dim priority
 create table dim_priority (
-	priority_id int primary key,
+	priority_id serial primary key,
 	priority varchar(50)
 );
 
 --create table dim promotion
 create table dim_promotion (
-	promotion_id int primary key,
+	promotion_id serial primary key,
 	promotion_name varchar(50)
 );
 
 --create table dim salesperson
 create table dim_salesperson (
-	salesperson_id int primary key,
+	salesperson_id serial primary key,
 	sales_department varchar(50)
 );
 
 --create table dim order
 create table dim_order (
-	order_id int primary key
+	order_id serial primary key
 );
 
 --create table dim channel
 create table dim_channel (
-	channel_id int primary key, 
+	channel_id serial primary key, 
 	channel varchar(50)
 );
 
 --create table dim customer
 create table dim_customer (
-	customer_id int primary key,
+	customer_id serial primary key,
 	customer_segment varchar(50),
 	loyalty_tier varchar(100)
 );
 
 --create table dim date (*check renaming code below*)
 create table date (
-	date_id int primary key,
+	date_id serial primary key,
 	purchase_date date,
 	shipping_date date,
 	return_date date
@@ -80,7 +80,7 @@ create table date (
 
 --create table fact
 create table retail_fact (
-	retail_id int primary key,
+	retail_id serial primary key,
 	location_id int,
 	payment_id int,
 	product_id int,
